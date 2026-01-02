@@ -8,7 +8,7 @@ description: This semantic model provides comprehensive insights for customer be
 lens:
   compute: runnable-default
   secrets:
-    - name: github-cred
+    - name: cb-github-cred
       allKeys: true
   source:
     type: minerva
