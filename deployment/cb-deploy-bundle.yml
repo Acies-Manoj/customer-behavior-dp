@@ -1,0 +1,12 @@
+name: customerbehavior-bundle
+version: v1beta
+type: bundle
+tags:
+  - dataproduct
+description: This bundle resource is for the customer behavior data product.
+layer: "user"
+bundle:
+  resources:
+    - id: lens
+      file: build/semantic-model/deployment.yml
+      workspace: public

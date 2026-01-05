@@ -28,13 +28,13 @@ workflow:
             explain: true
             logLevel: INFO
             inputs:
-              - name: customer_purchase_summary
-                dataset: dataos://icebase:training/customer_purchase_summary?acl=rw
+              - name: customer_purchase_summary_table
+                dataset: dataos://icebase:training/customer_purchase_summary_table?acl=rw
                 format: iceberg
 
             steps:
               - sequence:
-                  - name: customer_segments
+                  - name: customer_segments_mkr
                     sql: >
                       SELECT
                         customer_id,
@@ -62,11 +62,11 @@ workflow:
                           ELSE 'Regular Customers'
                         END AS segment_name
 
-                      FROM customer_purchase_summary
+                      FROM customer_purchase_summary_table
 
             outputs:
-              - name: customer_segments
-                dataset: dataos://icebase:training/customer_segments?acl=rw
+              - name: customer_segments_mkr
+                dataset: dataos://icebase:training/customer_segments_table?acl=rw
                 format: Iceberg
                 options:
                   saveMode: overwrite

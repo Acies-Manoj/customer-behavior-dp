@@ -34,10 +34,10 @@ workflow:
 
             steps:
               - sequence:
-                  - name: customer_purchase_summary
+                  - name: customer_purchase_summary_mkr
                     sql: >
                       SELECT
-                        p_customer_id AS customer_id,
+                        customer_id,
 
                         COALESCE(mntwines, 0)
                       + COALESCE(mntmeatproducts, 0)
@@ -83,8 +83,8 @@ workflow:
                       FROM purchase_data
 
             outputs:
-              - name: customer_purchase_summary
-                dataset: dataos://icebase:training/customer_purchase_summary?acl=rw
+              - name: customer_purchase_summary_mkr
+                dataset: dataos://icebase:training/customer_purchase_summary_table?acl=rw
                 format: Iceberg
                 options:
                   saveMode: overwrite
