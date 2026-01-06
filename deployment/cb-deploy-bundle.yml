@@ -8,5 +8,5 @@ layer: "user"
 bundle:
   resources:
     - id: lens
-      file: build/semantic-model/deployment.yml
+      file: C:\Users\Manoj\Desktop\customer-behavior-training\build\semantic-model\deployment.yml
       workspace: public

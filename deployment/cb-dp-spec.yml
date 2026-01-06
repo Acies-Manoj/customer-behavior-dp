@@ -7,7 +7,7 @@ tags:
   - DPUsecase.Customer Segmentation
   - DPUsecase.Customer behavior 
   - DPTier.Consumer Aligned
-description: 
+description: This data product focuses on understanding customer behavior and customer segments.
 refs:
   - title: 'Workspace Info'
     href: https://dataos.info/interfaces/cli/command_reference/#workspace
