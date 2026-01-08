@@ -10,3 +10,6 @@ bundle:
     - id: lens
       file: C:\Users\Manoj\Desktop\customer-behavior-training\build\semantic-model\deployment.yml
       workspace: public
+    - id: quality_purchase
+      file: C:\Users\Manoj\Desktop\customer-behavior-training\deployment\cb-deploy-bundle.yml
+      workspace: public
